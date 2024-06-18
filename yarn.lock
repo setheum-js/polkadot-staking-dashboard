@@ -1146,10 +1146,27 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
+"@substrate/connect-discovery@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@substrate/connect-discovery/-/connect-discovery-0.0.6.tgz#f70f944ee13fee03430958bbd7ce84a87909722c"
+  integrity sha512-V+OhCNre0gxnmC0E03FyO8ksCl4124Fi8TmwpDel+3U0aZp709O5FO3omzYVgtjxtEEIypIANgCL7jaVaMYIpg==
+  dependencies:
+    "@substrate/discovery" "^0.0.1"
+
 "@substrate/connect-extension-protocol@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@substrate/connect-extension-protocol/-/connect-extension-protocol-1.0.1.tgz#fa5738039586c648013caa6a0c95c43265dbe77d"
   integrity sha512-161JhCC1csjH3GE5mPLEd7HbWtwNSPJBg3p1Ksz9SFlTzj/bgEwudiRN2y5i0MoLGCIJRYKyKGMxVnd29PzNjg==
+
+"@substrate/connect-extension-protocol@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@substrate/connect-extension-protocol/-/connect-extension-protocol-2.0.0.tgz#badaa6e6b5f7c7d56987d778f4944ddb83cd9ea7"
+  integrity sha512-nKu8pDrE3LNCEgJjZe1iGXzaD6OSIDD4Xzz/yo4KO9mQ6LBvf49BVrt4qxBFGL6++NneLiWUZGoh+VSd4PyVIg==
+
+"@substrate/connect-known-chains@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@substrate/connect-known-chains/-/connect-known-chains-1.1.6.tgz#2627d329b82b46c7d745752c48c73e1b8ce6ac81"
+  integrity sha512-JwtdGbnK3ZqrY1qp3Ifr/p648sp9hG0Q715h4nRghnqZJnMQIiLKaFkcLnvrAiYQD3zNTYDztHidy5Q/u0TcbQ==
 
 "@substrate/connect@0.7.33":
   version "0.7.33"
@@ -1159,13 +1176,28 @@
     "@substrate/connect-extension-protocol" "^1.0.1"
     smoldot "2.0.1"
 
-"@substrate/connect@^0.7.35":
-  version "0.7.35"
-  resolved "https://registry.yarnpkg.com/@substrate/connect/-/connect-0.7.35.tgz#853d8ff50717a8c9ee8f219d11a86e61a54b88b8"
-  integrity sha512-Io8vkalbwaye+7yXfG1Nj52tOOoJln2bMlc7Q9Yy3vEWqZEVkgKmcPVzbwV0CWL3QD+KMPDA2Dnw/X7EdwgoLw==
+"@substrate/connect@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@substrate/connect/-/connect-1.0.2.tgz#143546c51bbb2258a2f22b6ceb4eab78b9c5d2ff"
+  integrity sha512-kCwPds/9iO0RkP4JbyEqiQ68pnpIWVY7dkj9jBfwo2BRntZbDeKXMq9ZjgDASW8keDhaVdo6donFtoWKST4w2g==
   dependencies:
-    "@substrate/connect-extension-protocol" "^1.0.1"
-    smoldot "2.0.7"
+    "@substrate/connect-discovery" "^0.0.6"
+    "@substrate/connect-extension-protocol" "^2.0.0"
+    "@substrate/connect-known-chains" "^1.1.6"
+    "@substrate/smoldot-discovery" "^0.0.6"
+    smoldot "2.0.29"
+
+"@substrate/discovery@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@substrate/discovery/-/discovery-0.0.1.tgz#1f7252f9b70169891ebf72f761c0308ea94f55c1"
+  integrity sha512-ba6Zv2EBs+7KFGg6NJSD4yRy7BztBxvDLsK5for4tgDCbqZMpolTHDLL9RGCHLoeFf5zfsuqnhAhsjVWz8c+vw==
+
+"@substrate/smoldot-discovery@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@substrate/smoldot-discovery/-/smoldot-discovery-0.0.6.tgz#33b4352dde02693a32ab45d0a3f2ddb6279435c6"
+  integrity sha512-4rNcxuaQCPOuUGPPK5zrF30sBzpBSA31eRTEqn7NFeoPWPMhYpYDPR+vtiIODrMFSKcl3cY9rrIoyZgPxjN4nA==
+  dependencies:
+    "@substrate/discovery" "^0.0.1"
 
 "@substrate/ss58-registry@^1.43.0":
   version "1.43.0"
@@ -4955,10 +4987,10 @@ smoldot@2.0.1:
   dependencies:
     ws "^8.8.1"
 
-smoldot@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/smoldot/-/smoldot-2.0.7.tgz#407efd6bbb82a074612db4d056d631d8d615f442"
-  integrity sha512-VAOBqEen6vises36/zgrmAT1GWk2qE3X8AGnO7lmQFdskbKx8EovnwS22rtPAG+Y1Rk23/S22kDJUdPANyPkBA==
+smoldot@2.0.29:
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/smoldot/-/smoldot-2.0.29.tgz#c0d2597dba43ee0c81d5d19247afab7bce9305b0"
+  integrity sha512-CKpRpFTcgP/9WL53X1iDSNq4/xjYd47XhYwZBhb92sAsCN8GNFeEnCdw568mvAt08wQt8UIMXXWo3hO/esDexg==
   dependencies:
     ws "^8.8.1"
 
